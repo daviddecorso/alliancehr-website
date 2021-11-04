@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+:root {
+  --primary-color: #ff3737;
+  --text-color: black;
+  --gutter: 13vw;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+#navbar {
+  height: 80px;
+  width: 100vw;
+  background-color: white;
+  color: var(--text-color);
+  display: flex;
+  justify-content: space-around;
+}
+
+#navbar-elements {
+  display: flex;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+
+.nav-list li {
+  padding-right: 1rem;
+}
+
+.nav-list li a {
+  color: black;
+  text-decoration: underline solid transparent;
+  font-weight: 500;
+}
+
+.nav-list li a:hover {
+  text-decoration: underline 1.5px solid;
+}
+
+.nav-button-outlined {
+  background-color: white;
+  color: var(--primary-color);
+  outline: 3px solid var(--primary-color);
+  border: none;
+  border-radius: 12px;
+  height: 44px;
+  width: 120px;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+.nav-button-filled {
+  width: 120px;
+  height: 44px;
+  color: white;
+  background-color: var(--primary-color);
+  border-radius: 16px;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+#hero {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(
+    286.16deg,
+    rgba(212, 59, 59, 0.77) 14.51%,
+    rgba(225, 132, 132, 0.609375) 58.62%,
+    rgba(251, 75, 75, 0.24) 99.99%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+#hero-text {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin-left: var(--gutter);
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+#hero-img {
+  width: 30%;
+  height: auto;
+  margin-left: var(--gutter);
+}
+
+.emphasized-text {
+  color: var(--primary-color);
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  margin-bottom: 1.5rem;
+}
+
+.cta-button {
+  width: 210px;
+  height: 48px;
+  color: white;
+  background-color: var(--primary-color);
+  border-radius: 16px;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background-color: #ff2323;
+}
