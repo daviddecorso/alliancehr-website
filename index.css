@@ -3,6 +3,8 @@
 :root {
   --primary-color: #ff3737;
   --text-color: black;
+  --text-secondary: #3f3f3f;
+  --grey-background: #e5e5e5;
   --gutter: 13vw;
 }
 
@@ -22,6 +24,7 @@ body {
 
 #navbar-elements {
   display: flex;
+  align-items: center;
 }
 
 .nav-list {
@@ -47,20 +50,27 @@ body {
 .nav-button-outlined {
   background-color: white;
   color: var(--primary-color);
-  outline: 3px solid var(--primary-color);
-  border: none;
+  border: 3px solid var(--primary-color);
   border-radius: 12px;
-  height: 44px;
-  width: 120px;
+  height: 47px;
+  width: 140px;
   font-size: 16px;
   font-weight: 500;
   margin: 0.5rem;
   cursor: pointer;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.nav-button-outlined:hover {
+  background-color: #ff2323;
+  border: 3px solid #ff2323;
+  color: white;
 }
 
 .nav-button-filled {
-  width: 120px;
-  height: 44px;
+  width: 140px;
+  height: 47px;
   color: white;
   background-color: var(--primary-color);
   border-radius: 16px;
@@ -68,6 +78,12 @@ body {
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.nav-button-filled:hover {
+  background-color: #ff2323;
 }
 
 #hero {
@@ -93,6 +109,12 @@ body {
 .title {
   font-size: 40px;
   font-weight: 700;
+}
+
+h2 {
+  font-size: 34px;
+  font-weight: 500;
+  text-align: center;
 }
 
 #hero-img {
@@ -124,4 +146,111 @@ body {
 
 .cta-button:hover {
   background-color: #ff2323;
+}
+
+#services {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 5vh;
+}
+
+.service-div {
+  max-width: 25vw;
+  text-align: center;
+}
+
+.learn-more-button {
+  width: 186px;
+  height: 40px;
+  color: white;
+  background-color: var(--primary-color);
+  border-radius: 20px;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.learn-more-button:hover {
+  background-color: #ff2323;
+}
+
+.icon-large {
+  width: 80px;
+  height: auto;
+}
+
+#why-alliance {
+  padding-top: 2vh;
+  background-color: var(--grey-background);
+}
+
+#why-content {
+  margin-left: var(--gutter);
+  margin-right: var(--gutter);
+  display: flex;
+  justify-content: space-between;
+}
+
+#why-text {
+  text-align: left;
+  width: 470px;
+  margin-bottom: 3rem;
+}
+
+.statistics-content {
+  display: flex;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.statistics-div {
+  margin-left: 3vw;
+  margin-right: 3vw;
+}
+
+.statistic {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.big-stat {
+  font-size: 52px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-weight: 500;
+}
+
+#testimonials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonial-text {
+  text-align: center;
+  max-width: 900px;
+}
+
+#cta {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+#cta-content {
+  margin-left: var(--gutter);
+  margin-right: var(--gutter);
+}
+
+#cta-text {
+  text-align: left;
+}
+
+.cta-title {
+  text-align: left;
 }
