@@ -13,6 +13,10 @@ body {
   margin: 0;
 }
 
+/*
+ * NAVBAR SECTION
+ */
+
 #navbar {
   height: 80px;
   background-color: white;
@@ -85,6 +89,10 @@ body {
   background-color: #ff2323;
 }
 
+/*
+ * HERO SECTION
+ */
+
 #hero {
   height: 50vh;
   display: flex;
@@ -149,6 +157,10 @@ h2 {
   background-color: #ff2323;
 }
 
+/*
+ * SERVICES SECTION
+ */
+
 #services {
   display: flex;
   justify-content: space-evenly;
@@ -180,6 +192,10 @@ h2 {
   width: 80px;
   height: auto;
 }
+
+/*
+ * WHY ALLIANCE SECTION
+ */
 
 #why-alliance {
   padding-top: 4vh;
@@ -228,6 +244,10 @@ h2 {
   font-weight: 500;
 }
 
+/*
+ * TESTIMONIALS SECTION
+ */
+
 #testimonials {
   padding-bottom: 4vh;
   display: flex;
@@ -255,6 +275,10 @@ h2 {
 .testimonial-company {
   margin-bottom: 1rem;
 }
+
+/*
+ * CTA SECTION
+ */
 
 #cta {
   background-color: var(--primary-color);
