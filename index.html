@@ -142,9 +142,13 @@
     <!-- TESTIMONIALS SECTION -->
     <h2>See What Our Clients Are Saying</h2>
     <div id="testimonials">
-      <div></div>
-      <p class="testimonial-name"></p>
-      <p class="company-name"></p>
+      <div class="testimonial-profile"></div>
+      <p class="testimonial-text">
+        I call AllianceHR at all times of the day and it's nice to know that
+        they are always available. Whether it’s a favor I need in submitting my
+        payroll late or if I have a tax form I need help understanding, Alliance
+        is always there for me. I'd recommend them to anyone looking for a PEO.
+      </p>
       <div class="stars">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -228,20 +232,68 @@
           />
         </svg>
       </div>
-      <p class="testimonial-text">
-        I call AllianceHR at all times of the day and it's nice to know that
-        they are always available. Whether it’s a favor I need in submitting my
-        payroll late or if I have a tax form I need help understanding, Alliance
-        is always there for me. I'd recommend them to anyone looking for a PEO.
-      </p>
+
+      <span class="testimonial-name">Raymond Jones</span>
+      <span class="testimonial-company">Company Name Inc.</span>
     </div>
 
     <!-- CTA SECTION -->
     <div id="cta">
       <div id="cta-content">
         <div id="cta-text">
-          <h2 class="cta-title">Get your free quote</h2>
-          <sub>See what AllianceHR can do for your company</sub>
+          <h2 class="cta-title">Get your free quote!</h2>
+          <sub class="cta-subtitle hero-subtitle"
+            >Fill out the form and see what AllianceHR can do for your company.
+            We'll get back to you as soon as possible.</sub
+          >
+          <span id="or">OR</span>
+          <div class="cta-phone-div">
+            <sub class="cta-phone-text hero-subtitle" style="margin-bottom: 0"
+              >Give us a call at</sub
+            >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-phone-call"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="#FFFFFF"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"
+              />
+              <path d="M15 7a2 2 0 0 1 2 2" />
+              <path d="M15 3a6 6 0 0 1 6 6" />
+            </svg>
+            <span>(561)-972-4449</span>
+          </div>
+        </div>
+        <div id="cta-form">
+          <div class="form-content">
+            <label for="name">Your Name</label>
+            <input name="name" type="text" id="name-input" required />
+
+            <label for="company">Your Company</label>
+            <input name="company" type="text" id="company-input" required />
+
+            <label for="email">Email</label>
+            <input name="email" type="email" id="email-input" required />
+
+            <label for="phone">Phone Number</label>
+            <input name="phone" type="tel" id="phone-input" required />
+
+            <label for="employees">Number of Employees</label>
+            <input name="employees" type="text" id="employees-input" required />
+
+            <label for="type">Type of Business</label>
+            <input name="type" type="text" id="type-input" required />
+            <button class="form-button nav-button-filled">Submit</button>
+          </div>
         </div>
       </div>
     </div>

@@ -15,7 +15,6 @@ body {
 
 #navbar {
   height: 80px;
-  width: 100vw;
   background-color: white;
   color: var(--text-color);
   display: flex;
@@ -115,6 +114,8 @@ h2 {
   font-size: 34px;
   font-weight: 500;
   text-align: center;
+  padding-top: 2vh;
+  padding-bottom: 3vh;
 }
 
 #hero-img {
@@ -133,13 +134,13 @@ h2 {
 }
 
 .cta-button {
-  width: 210px;
-  height: 48px;
+  width: 260px;
+  height: 58px;
   color: white;
   background-color: var(--primary-color);
   border-radius: 16px;
   border: none;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
   cursor: pointer;
 }
@@ -151,7 +152,7 @@ h2 {
 #services {
   display: flex;
   justify-content: space-evenly;
-  margin-bottom: 5vh;
+  margin-bottom: 10vh;
 }
 
 .service-div {
@@ -181,7 +182,8 @@ h2 {
 }
 
 #why-alliance {
-  padding-top: 2vh;
+  padding-top: 4vh;
+  padding-bottom: 4vh;
   background-color: var(--grey-background);
 }
 
@@ -227,6 +229,7 @@ h2 {
 }
 
 #testimonials {
+  padding-bottom: 4vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -237,6 +240,22 @@ h2 {
   max-width: 900px;
 }
 
+.testimonial-profile {
+  width: 100px;
+  height: 100px;
+  background-color: #c4c4c4;
+  border-radius: 50%;
+}
+
+.testimonial-name {
+  margin-top: 1rem;
+  font-weight: 700;
+}
+
+.testimonial-company {
+  margin-bottom: 1rem;
+}
+
 #cta {
   background-color: var(--primary-color);
   color: white;
@@ -245,12 +264,64 @@ h2 {
 #cta-content {
   margin-left: var(--gutter);
   margin-right: var(--gutter);
+  display: flex;
+  padding-bottom: 30vh;
 }
 
 #cta-text {
   text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+#or {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
 }
 
 .cta-title {
+  padding-top: 4rem;
+  padding-bottom: 0.5rem;
   text-align: left;
+}
+
+#cta-form {
+  background-color: white;
+  color: var(--text-color);
+  width: 600px;
+  border-radius: 20px;
+  margin-top: 5rem;
+  margin-left: 2rem;
+  font-weight: 500;
+}
+
+.form-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-content input {
+  margin-bottom: 1rem;
+  font-size: 16px;
+  height: 30px;
+  border-radius: 3px;
+  border: 1px solid var(--text-secondary);
+}
+
+.form-button {
+  font-size: 18px;
+  align-self: center;
+  margin-top: 1rem;
+}
+
+.cta-phone-text {
+  margin-right: 3rem;
+}
+
+.cta-phone-div {
+  display: flex;
+  align-items: center;
 }
