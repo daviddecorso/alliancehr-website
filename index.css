@@ -259,7 +259,6 @@ h2 {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-9.6%, -50%);
   width: 4700px;
   transition: 0.4s ease-in-out;
 }
@@ -367,4 +366,86 @@ h2 {
 .cta-phone-div {
   display: flex;
   align-items: center;
+}
+
+/* ANIMATION */
+@keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 40px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 40px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+}
+
+.animatedFadeInUp {
+  opacity: 0;
+}
+
+.fadeInUp {
+  opacity: 0;
+  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp;
+}
+
+@keyframes fadeInLeft {
+  from {
+    transform: translate3d(-40px, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+.animatedFadeInLeft {
+  opacity: 0;
+}
+
+.fadeInLeft {
+  opacity: 0;
+  animation-name: fadeInLeft;
+  -webkit-animation-name: fadeInLeft;
+}
+
+@keyframes fadeInRight {
+  from {
+    transform: translate(10.4%, -50%);
+  }
+
+  to {
+    transform: translate(-9.6%, -50%);
+    opacity: 1;
+  }
+}
+
+.animatedFadeInRight {
+  opacity: 0;
+}
+
+.fadeInRight {
+  opacity: 0;
+  animation-name: fadeInRight;
+  -webkit-animation-name: fadeInRight;
 }

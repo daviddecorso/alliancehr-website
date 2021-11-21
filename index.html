@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home - AllianceHR LLC</title>
     <link rel="stylesheet" href="index.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
   </head>
   <body>
     <!-- NAVBAR SECTION -->
@@ -65,8 +66,8 @@
     </div>
 
     <!-- SERVICES SECTION -->
-    <h2>Our Services</h2>
-    <div id="services">
+    <h2 class="animated animatedFadeInUp fadeInUp">Our Services</h2>
+    <div class="animated animatedFadeInUp fadeInUp" id="services">
       <div class="service-div">
         <img
           class="icon-large"
@@ -104,7 +105,7 @@
     <!-- WHY ALLIANCE SECTION -->
     <div id="why-alliance">
       <div id="why-content">
-        <div id="why-text">
+        <div class="animatedFadeInLeft" id="why-text">
           <h2 style="text-align: left">
             Why should you choose
             <span class="emphasized-text">AllianceHR</span>?
@@ -119,19 +120,19 @@
         <div class="statistics-content">
           <div class="statistics-div">
             <div class="statistic">
-              <span class="big-stat">$500K</span>
+              <span id="stat-1" class="big-stat">$500K</span>
               <span class="stat-label">Dollars saved</span>
             </div>
           </div>
           <div class="statistics-div">
             <div class="statistic">
-              <span class="big-stat">10K</span>
+              <span id="stat-2" class="big-stat">10K</span>
               <span class="stat-label">Employees managed</span>
             </div>
           </div>
           <div class="statistics-div">
             <div class="statistic">
-              <span class="big-stat">97%</span>
+              <span id="stat-3" class="big-stat">97%</span>
               <span class="stat-label">Client satisfaction</span>
             </div>
           </div>
@@ -151,7 +152,7 @@
         margin-bottom: 1rem;
       "
     >
-      <div id="testimonials">
+      <div class="animatedFadeInRight" id="testimonials">
         <div id="testimonial1" class="testimonial">
           <p class="testimonial-text">
             "Before I joined AllianceHR, it was a challenge to manage worker’s
@@ -299,7 +300,7 @@
           top: 0;
           right: 0;
           height: 100%;
-          width: 200px;
+          width: 8vw;
           background: linear-gradient(270deg, #fff, rgba(255, 255, 255, 0));
         "
       ></div>
@@ -309,7 +310,7 @@
           top: 0;
           left: 0;
           height: 100%;
-          width: 200px;
+          width: 8vw;
           background: linear-gradient(90deg, #fff, rgba(255, 255, 255, 0));
         "
       ></div>
@@ -400,5 +401,87 @@
     document.getElementById("testimonial5").onclick = () => {
       setTranslate(5);
     };
+  </script>
+  <script>
+    const stat1 = document.getElementById("stat-1");
+    const stat2 = document.getElementById("stat-2");
+    const stat3 = document.getElementById("stat-3");
+
+    const whyAlliance = document.getElementById("why-text");
+    const testimonials = document.getElementById("testimonials");
+
+    let isStatsAnimated = false;
+    let isWhyAnimated = false;
+    let isTestimonialsAnimated = false;
+
+    function animateValue(
+      obj,
+      start,
+      end,
+      duration,
+      isMoney,
+      hasK,
+      hasPercent
+    ) {
+      let startTimestamp = null;
+      const step = (timestamp) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        obj.innerHTML = `${isMoney ? "$" : ""}${Math.floor(
+          progress * (end - start) + start
+        )}${hasK ? "K" : ""}${hasPercent ? "%" : ""}`;
+        if (progress < 1) {
+          window.requestAnimationFrame(step);
+        }
+      };
+      window.requestAnimationFrame(step);
+    }
+
+    const statsWaypoint = new Waypoint({
+      element: document.getElementById("stat-1"),
+      handler: () => {
+        if (!isStatsAnimated) {
+          animateValue(stat1, 100, 500, 1000, true, true, false);
+          animateValue(stat2, 0, 10, 600, false, true, false);
+          animateValue(stat3, 0, 97, 800, false, false, true);
+          isStatsAnimated = true;
+        }
+      },
+      offset: "90%",
+    });
+
+    const whyWaypoint = new Waypoint({
+      element: document.getElementById("why-text"),
+      handler: () => {
+        if (!isWhyAnimated) {
+          whyAlliance.classList.add("animated", "fadeInLeft");
+          isWhyAnimated = true;
+          console.log("TEST!!!!");
+        }
+      },
+      offset: "90%",
+    });
+
+    const testimonialsWaypoint = new Waypoint({
+      element: document.getElementById("testimonials"),
+      handler: () => {
+        if (!isTestimonialsAnimated) {
+          testimonials.classList.add("animated", "fadeInRight");
+          isTestimonialsAnimated = true;
+          setTimeout(() => {
+            document
+              .getElementById("testimonials")
+              .classList.remove(
+                "animated",
+                "animatedFadeInRight",
+                "fadeInRight"
+              );
+            document.getElementById("testimonials").style.transform =
+              "translate(-9.6%, -50%)";
+          }, 1200);
+        }
+      },
+      offset: "90%",
+    });
   </script>
 </html>
