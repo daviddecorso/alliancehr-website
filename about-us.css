@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 
 :root {
-  --primary-color: #ff3737;
+  --primary-color: #2042ff;
+  --primary-hover-color: #0026ff;
   --text-color: black;
   --text-secondary: #3f3f3f;
   --grey-background: #e5e5e5;
@@ -19,6 +20,7 @@ body {
   color: var(--text-color);
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 #navbar-elements {
@@ -62,8 +64,8 @@ body {
 }
 
 .nav-button-outlined:hover {
-  background-color: #ff2323;
-  border: 3px solid #ff2323;
+  background-color: var(--primary-hover-color);
+  border: 3px solid var(--primary-hover-color);
   color: white;
 }
 
@@ -82,7 +84,7 @@ body {
 }
 
 .nav-button-filled:hover {
-  background-color: #ff2323;
+  background-color: var(--primary-hover-color);
 }
 
 .emphasized-text {
@@ -90,6 +92,7 @@ body {
 }
 
 .content {
+  margin-top: 4rem;
   margin-left: var(--gutter);
   margin-right: var(--gutter);
   text-align: left;
