@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home - AllianceHR LLC</title>
-    <link rel="stylesheet" href="about-us.css" />
+    <title>Our Services - AllianceHR LLC</title>
+    <link rel="stylesheet" href="our-services.css" />
   </head>
   <body>
     <!-- NAVBAR SECTION -->
@@ -48,22 +48,164 @@
           </li>
         </ul>
         <button class="nav-button-outlined">Get a quote</button>
-        <button class="nav-button-filled">Client Login</button>
+        <div class="buttons-div" style="position: relative">
+          <button class="nav-button-filled">Client Login</button>
+          <div
+            class="hidden forms-button"
+            onclick="window.location.assign('/forms.html')"
+            style="
+              position: absolute;
+              padding-bottom: 3px;
+              border-radius: 16px;
+              cursor: pointer;
+              width: 140px;
+              height: 45px;
+              text-align: center;
+              border: 2px solid black;
+              margin-top: 1px;
+            "
+          >
+            <p>Client Forms</p>
+          </div>
+        </div>
       </div>
     </nav>
-
-    <div style="margin-top: 6vh" class="content">
-      <h1
+    <h1
+      style="
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        font-size: 2.5rem;
+        font-weight: 700;
+        text-align: center;
+      "
+    >
+      Our <span class="emphasized-text">Services</span>
+    </h1>
+    <div class="content">
+      <div style="display: flex; justify-content: center">
+        <img
+          class="icon-large"
+          src="./img/payroll-icon.svg"
+          alt=""
+          style="width: auto; height: 120px; margin-left: 30px"
+        />
+      </div>
+      <h2
         style="
-          margin-top: 3rem;
-          margin-bottom: 3rem;
-          font-size: 2.5rem;
-          font-weight: 700;
+          font-size: 34px;
+          font-weight: 500;
           text-align: center;
+          padding-top: 0;
+          padding-bottom: 1rem;
         "
       >
-        Our Services
-      </h1>
+        Payroll processing
+      </h2>
+      <p>
+        AllianceHR provides payroll processing services and employer side tax
+        administration for its clients. Alliance ensures the timely delivery of
+        your payroll, while handling all related taxes and employment
+        verification needs. Alliance also utilizes a comprehensive online
+        payroll program which clients have access to through this website.
+        AllianceHR is responsible for IT staff, customer support, and software
+        upgrades that are required.
+      </p>
+    </div>
+    <div class="content">
+      <div style="display: flex; justify-content: center">
+        <img
+          class="icon-large"
+          src="./img/workerscomp-icon.svg"
+          alt=""
+          style="width: auto; height: 120px"
+        />
+      </div>
+      <h2
+        style="
+          font-size: 34px;
+          font-weight: 500;
+          text-align: center;
+          padding-top: 0;
+          padding-bottom: 1rem;
+        "
+      >
+        Workers' compensation
+      </h2>
+      <p>
+        Workers' compensation insurance coverage is a difficult thing for a
+        company to secure, and then manage. Fraud, dishonest employees, and
+        negligence can all lead to costly injuries or losses. A relationship
+        with AllianceHR eliminates these potential pitfalls since all clients’
+        employees are covered under Alliance’s workers' compensation policy.
+        <br /><br />
+        Alliance assumes the liability for employee injuries, and clients have
+        no prepayment of premium, deposits or audits. Alliance also provides the
+        risk management, claims management, year-end audits, employee safety
+        programs, and requested certificates of insurance.
+      </p>
+    </div>
+    <div class="content">
+      <div style="display: flex; justify-content: center">
+        <img
+          class="icon-large"
+          src="./img/employeebenefits-icon.svg"
+          alt=""
+          style="width: auto; height: 120px"
+        />
+      </div>
+      <h2
+        style="
+          font-size: 34px;
+          font-weight: 500;
+          text-align: center;
+          padding-top: 0;
+          padding-bottom: 1rem;
+        "
+      >
+        Employee benefits
+      </h2>
+      <p>
+        Providing Employee Benefits is an essential element in today business
+        world. AllianceHR's state of the art payroll software enables us to
+        fully administer your company’s benefit plans pre-tax. All AllianceHR
+        clients and employees have online access to a number of detailed benefit
+        reports.
+        <br /><br />
+        AllianceHR has a complete array of benefits plans that your company can
+        qualify for by submitting a demographic census. Please speak with your
+        sales representative and they will provide you with the information to
+        start the process.
+      </p>
+    </div>
+    <div class="content" style="margin-top: 6rem">
+      <h2>Our full list of services:</h2>
+      <div class="services-list">
+        <p>Accurate, On-Time Payroll Processing and Distribution</p>
+        <p>Direct Deposits</p>
+        <p>Employee Benefits</p>
+        <p>Secure, Online Client Login and Employee Access</p>
+        <p>
+          “Pay as you go” workers comp. The client pays a certain percentage
+          every pay period
+        </p>
+        <p>Payroll record maintenance and management</p>
+        <p>Employee verification. I-9’s</p>
+        <p>Payroll Tax Compliance. Quarterly and Annual reports filed</p>
+        <p>W2’s and annual tax reports</p>
+        <p>Employee safety program and Return to work program</p>
+        <p>Coverage through an “A” rated insurance carrier</p>
+        <p>ACH payment of invoices</p>
+        <p>
+          Eliminates client workers comp risk since AllianceHR is the employer
+          of record
+        </p>
+        <p>Workers Comp and Unemployment Claims management</p>
+        <p>Certificate of insurance requests</p>
+        <p>No workers comp deposits, audits or large premiums</p>
+        <p>Established risk management program with a proven track record</p>
+      </div>
+    </div>
+    <div style="margin-top: 15vh" class="content">
       <div style="position: relative; margin: 2rem 5rem 3rem 5rem">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -94,92 +236,29 @@
             font-weight: 200;
           "
         >
-          Our mission is to save our client's time and money by handling all of
-          the time consuming aspects of payroll processing and worker's comp
-          insurance.
-        </p>
-      </div>
-      <!-- <img src="./img/about-alliance.jpg" alt="" /> -->
-      <div style="display: flex; justify-content: center">
-        <p style="margin-bottom: 4rem; max-width: 1100px">
           Partnering with a Professional Employer Organization (PEO) enables a
           company to outsource its payroll processing, workers’ compensation
           insurance, administration of employee benefits and the management of
           human resources.
         </p>
       </div>
-    </div>
-    <div class="content">
-      <h2
-        style="
-          font-size: 34px;
-          font-weight: 500;
-          text-align: center;
-          padding-top: 2rem;
-          padding-bottom: 1rem;
-        "
-      >
-        Payroll processing
-      </h2>
-      <p>
-        AllianceHR provides payroll processing services and employer side tax
-        administration for its clients. Alliance ensures the timely delivery of
-        your payroll, while handling all related taxes and employment
-        verification needs. Alliance also utilizes a comprehensive online
-        payroll program which clients have access to through this website.
-        AllianceHR is responsible for IT staff, customer support, and software
-        upgrades that are required.
-      </p>
-    </div>
-    <div class="content">
-      <h2
-        style="
-          font-size: 34px;
-          font-weight: 500;
-          text-align: center;
-          padding-top: 2rem;
-          padding-bottom: 1rem;
-        "
-      >
-        Workers compensation
-      </h2>
-      <p>
-        Workers compensation insurance coverage is a difficult thing for a
-        company to secure, and then manage. Fraud, dishonest employees, and
-        negligence can all lead to costly injuries or losses. A relationship
-        with AllianceHR eliminates these potential pitfalls since all clients’
-        employees are covered under Alliance’s workers compensation policy.
-        <br /><br />
-        Alliance assumes the liability for employee injuries, and clients have
-        no prepayment of premium, deposits or audits. Alliance also provides the
-        risk management, claims management, year-end audits, employee safety
-        programs, and requested certificates of insurance.
-      </p>
-    </div>
-    <div class="content">
-      <h2
-        style="
-          font-size: 34px;
-          font-weight: 500;
-          text-align: center;
-          padding-top: 2rem;
-          padding-bottom: 1rem;
-        "
-      >
-        Employee benefits
-      </h2>
-      <p>
-        Providing Employee Benefits is an essential element in today business
-        world. AllianceHR's state of the art payroll software enables us to
-        fully administer your company’s benefit plans pre-tax. All AllianceHR
-        clients and employees have online access to a number of detailed benefit
-        reports.
-        <br /><br />
-        AllianceHR has a complete array of benefits plans that your company can
-        qualify for by submitting a demographic census. Please speak with your
-        sales representative and they will provide you with the information to
-        start the process.
-      </p>
+      <div style="display: flex; justify-content: center; margin-bottom: 2rem">
+        <img src="./img/about-alliance.jpg" alt="" />
+      </div>
+      <div style="display: flex; justify-content: center">
+        <p style="margin-bottom: 4rem">
+          A contractual relationship, known as “co-employment”, is established
+          between the PEO and its client. Under this co-employer agreement
+          AllianceHR becomes the employer of record, assuming responsibility for
+          payroll processing and payroll taxes, as well as the liability for
+          worker compensation and unemployment claims. The client still
+          maintains complete control of its operations, employees, marketing,
+          sales and service. Essentially, an affiliation with AllianceHR gives a
+          company more time to focus on sales and daily operations, allowing
+          them to grow and become more profitable. Let us help you build your
+          business.
+        </p>
+      </div>
     </div>
   </body>
 </html>

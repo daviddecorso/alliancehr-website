@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home - AllianceHR LLC</title>
+    <title>About Us - AllianceHR LLC</title>
     <link rel="stylesheet" href="about-us.css" />
   </head>
   <body>
@@ -48,7 +48,26 @@
           </li>
         </ul>
         <button class="nav-button-outlined">Get a quote</button>
-        <button class="nav-button-filled">Client Login</button>
+        <div class="buttons-div" style="position: relative">
+          <button class="nav-button-filled">Client Login</button>
+          <div
+            class="hidden forms-button"
+            onclick="window.location.assign('/forms.html')"
+            style="
+              position: absolute;
+              padding-bottom: 3px;
+              border-radius: 16px;
+              cursor: pointer;
+              width: 140px;
+              height: 45px;
+              text-align: center;
+              border: 2px solid black;
+              margin-top: 1px;
+            "
+          >
+            <p>Client Forms</p>
+          </div>
+        </div>
       </div>
     </nav>
 
@@ -120,7 +139,7 @@
       </div>
     </div>
     <div style="text-align: center">
-      <img src="./img/company-map.png" alt="Map of Alliance HR's locations" />
+      <img src="./img/company-map.svg" alt="Map of Alliance HR's locations" />
     </div>
 
     <div class="content">
@@ -164,7 +183,7 @@
       "
     >
       <img
-        src="./img/peo-diagram.png"
+        src="./img/peo-diagram.svg"
         alt="PEO Diagram"
         style="width: 500px; height: auto"
       />

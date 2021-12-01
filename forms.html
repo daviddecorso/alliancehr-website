@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Client Forms</title>
+    <link rel="stylesheet" href="forms.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <img
+        src="./img/logo-sm.png"
+        alt="AllianceHR Logo"
+        style="width: 160px; height: 52px"
+      />
+      <div id="navbar-elements">
+        <ul class="nav-list">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/our-services.html">Our Services</a></li>
+          <li><a href="/about-us.html">About Us</a></li>
+          <li><a href="/">News</a></li>
+          <li><a href="/">Contact Us</a></li>
+          <li>
+            <a href="/"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-phone-call"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="#000000"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"
+                />
+                <path d="M15 7a2 2 0 0 1 2 2" />
+                <path d="M15 3a6 6 0 0 1 6 6" />
+              </svg>
+              <span>(561)-972-4449</span>
+            </a>
+          </li>
+        </ul>
+        <button class="nav-button-outlined">Get a quote</button>
+        <div class="buttons-div" style="position: relative">
+          <button class="nav-button-filled">Client Login</button>
+          <div
+            class="hidden forms-button"
+            onclick="window.location.assign('/forms.html')"
+            style="
+              position: absolute;
+              padding-bottom: 3px;
+              border-radius: 16px;
+              cursor: pointer;
+              width: 140px;
+              height: 45px;
+              text-align: center;
+              border: 2px solid black;
+              margin-top: 1px;
+            "
+          >
+            <p>Client Forms</p>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </body>
+</html>

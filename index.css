@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 
 :root {
-  --primary-color: #2042ff;
-  --primary-hover-color: #0026ff;
+  --primary-color: #6b86bd;
+  --primary-hover-color: #5781d6;
   --text-color: black;
   --text-secondary: #3f3f3f;
   --grey-background: #e5e5e5;
@@ -15,6 +15,7 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
+  font-size: 18px;
   margin: 0;
 }
 
@@ -24,6 +25,7 @@ body {
 
 #navbar {
   height: 80px;
+  font-size: 16px;
   background-color: white;
   color: var(--text-color);
   display: flex;
@@ -95,6 +97,23 @@ body {
   background-color: var(--primary-hover-color);
 }
 
+.buttons-div:hover .hidden {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.forms-button {
+  background-color: white;
+}
+
+.forms-button:hover {
+  background-color: var(--primary-hover-color);
+  color: white;
+}
+
 /*
  * HERO SECTION
  */
@@ -105,9 +124,9 @@ body {
   align-items: center;
   background: linear-gradient(
     286.16deg,
-    #2042ff 14.51%,
-    #6c82ff 58.62%,
-    #96a6ff 99.99%,
+    #6b86bd 14.51%,
+    #c1d6fc 58.62%,
+    #d6e3fa 99.99%,
     #ffffff00 100%
   );
 }
@@ -170,14 +189,17 @@ h2 {
 #services {
   display: flex;
   justify-content: space-evenly;
-  margin-bottom: 10vh;
+  margin-bottom: 7vh;
 }
 
 .service-div {
   max-width: 25vw;
   text-align: center;
   border-radius: 63px;
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .service-div:hover {

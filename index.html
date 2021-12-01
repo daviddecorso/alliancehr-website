@@ -49,7 +49,26 @@
           </li>
         </ul>
         <button class="nav-button-outlined">Get a quote</button>
-        <button class="nav-button-filled">Client Login</button>
+        <div class="buttons-div" style="position: relative">
+          <button class="nav-button-filled">Client Login</button>
+          <div
+            class="hidden forms-button"
+            onclick="window.location.assign('/forms.html')"
+            style="
+              position: absolute;
+              padding-bottom: 3px;
+              border-radius: 16px;
+              cursor: pointer;
+              width: 140px;
+              height: 45px;
+              text-align: center;
+              border: 2px solid black;
+              margin-top: 1px;
+            "
+          >
+            <p>Client Forms</p>
+          </div>
+        </div>
       </div>
     </nav>
 
@@ -57,20 +76,20 @@
     <div id="hero">
       <div id="hero-text">
         <h1 class="title">
-          The <span class="emphasized-text">total solution</span> for payroll
-          and worker's comp.
+          The <span class="emphasized-text">One Stop Shop</span> for HR.
         </h1>
         <sub class="hero-subtitle"
-          >We are super cool and awesome! Pick us! Seriously! I am not joking
-          you will not regret it!</sub
+          >Payroll, workers' comp, benefits, compliance, & more!</sub
         >
-        <button class="cta-button">Get a free quote</button>
+        <button class="cta-button">Get your free quote</button>
       </div>
       <img id="hero-img" src="./img/hero-img.jpg" alt="" />
     </div>
 
     <!-- SERVICES SECTION -->
-    <h2 class="animated animatedFadeInUp fadeInUp">Our Services</h2>
+    <h2 class="animated animatedFadeInUp fadeInUp" style="padding-bottom: 0">
+      Our Services
+    </h2>
     <div class="animated animatedFadeInUp fadeInUp" id="services">
       <div class="service-div">
         <img
@@ -81,8 +100,8 @@
         />
         <h3 class="service-title">Payroll processing</h3>
         <p class="service-text">
-          There shouldn’t be a ton of information here. Summarise in two or
-          three sentances and entice someone to click “learn more.”
+          Easily submit and track payroll. Our innovative platform makes running
+          payroll a breeze.
         </p>
         <button class="learn-more-button">Learn more</button>
       </div>
@@ -90,8 +109,8 @@
         <img class="icon-large" src="./img/workerscomp-icon.svg" alt="" />
         <h3 class="service-title">Worker's comp</h3>
         <p class="service-text">
-          There shouldn’t be a ton of information here. Summarise in two or
-          three sentances and entice someone to click “learn more.”
+          Gain access to A+ rated worker’s comp insurance. Our system makes
+          getting covered straightforward and easier than ever.
         </p>
         <button class="learn-more-button">Learn more</button>
       </div>
@@ -99,8 +118,8 @@
         <img class="icon-large" src="./img/employeebenefits-icon.svg" alt="" />
         <h3 class="service-title">Employee benefits</h3>
         <p class="service-text">
-          There shouldn’t be a ton of information here. Summarise in two or
-          three sentances and entice someone to click “learn more.”
+          Retain talent with Fortune 500 level benefits no matter the size of
+          your organization.
         </p>
         <button class="learn-more-button">Learn more</button>
       </div>
@@ -110,34 +129,34 @@
     <div id="why-alliance">
       <div id="why-content">
         <div class="animatedFadeInLeft" id="why-text">
-          <h2 style="text-align: left">
+          <h2 style="text-align: left; padding-bottom: 0">
             Why should you choose
             <span class="emphasized-text">AllianceHR</span>?
           </h2>
           <p>
-            AllianceHR has the Best Customer Service in the PEO industry. Our
-            personalized approach combined with cutting edge software separates
-            us from other PEO's.
+            Partnering with AllianceHR provides your business with a competitive
+            edge. The numbers speak for themselves as our clients grow faster,
+            report less stress, and save money compared to traditional systems.
           </p>
           <button class="learn-more-button">More about us</button>
         </div>
         <div class="statistics-content">
           <div class="statistics-div">
             <div class="statistic">
-              <span id="stat-1" class="big-stat">$500K</span>
-              <span class="stat-label">Dollars saved</span>
+              <span id="stat-1" class="big-stat">$30K</span>
+              <span class="stat-label">Median saved</span>
             </div>
           </div>
           <div class="statistics-div">
             <div class="statistic">
-              <span id="stat-2" class="big-stat">10K</span>
-              <span class="stat-label">Employees managed</span>
+              <span id="stat-2" class="big-stat">15%</span>
+              <span class="stat-label">Faster growth</span>
             </div>
           </div>
           <div class="statistics-div">
             <div class="statistic">
-              <span id="stat-3" class="big-stat">97%</span>
-              <span class="stat-label">Client satisfaction</span>
+              <span id="stat-3" class="big-stat">100%</span>
+              <span class="stat-label">Report less stress</span>
             </div>
           </div>
         </div>
@@ -445,9 +464,9 @@
       element: document.getElementById("stat-1"),
       handler: () => {
         if (!isStatsAnimated) {
-          animateValue(stat1, 100, 500, 1000, true, true, false);
-          animateValue(stat2, 0, 10, 600, false, true, false);
-          animateValue(stat3, 0, 97, 800, false, false, true);
+          animateValue(stat1, 0, 30, 700, true, true, false);
+          animateValue(stat2, 0, 15, 500, false, false, true);
+          animateValue(stat3, 0, 100, 600, false, false, true);
           isStatsAnimated = true;
         }
       },
