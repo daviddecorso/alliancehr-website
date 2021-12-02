@@ -7,6 +7,7 @@
   --text-secondary: #3f3f3f;
   --grey-background: #e5e5e5;
   --gutter: 13vw;
+  --mobile-gutter: 7vw;
 }
 
 html {
@@ -17,101 +18,6 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   margin: 0;
-}
-
-/*
- * NAVBAR SECTION
- */
-
-#navbar {
-  height: 80px;
-  font-size: 16px;
-  background-color: white;
-  color: var(--text-color);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-#navbar-elements {
-  display: flex;
-  align-items: center;
-}
-
-.nav-list {
-  display: flex;
-  align-items: center;
-  list-style-type: none;
-}
-
-.nav-list li {
-  padding-right: 1rem;
-}
-
-.nav-list li a {
-  color: black;
-  text-decoration: underline solid transparent;
-  font-weight: 500;
-}
-
-.nav-list li a:hover {
-  text-decoration: underline 1.5px solid;
-}
-
-.nav-button-outlined {
-  background-color: white;
-  color: var(--primary-color);
-  border: 3px solid var(--primary-color);
-  border-radius: 12px;
-  height: 47px;
-  width: 140px;
-  font-size: 16px;
-  font-weight: 500;
-  margin: 0.5rem;
-  cursor: pointer;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.nav-button-outlined:hover {
-  background-color: var(--primary-hover-color);
-  border: 3px solid var(--primary-hover-color);
-  color: white;
-}
-
-.nav-button-filled {
-  width: 140px;
-  height: 47px;
-  color: white;
-  background-color: var(--primary-color);
-  border-radius: 16px;
-  border: none;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-
-.nav-button-filled:hover {
-  background-color: var(--primary-hover-color);
-}
-
-.buttons-div:hover .hidden {
-  display: block;
-}
-
-.hidden {
-  display: none;
-}
-
-.forms-button {
-  background-color: white;
-}
-
-.forms-button:hover {
-  background-color: var(--primary-hover-color);
-  color: white;
 }
 
 /*
@@ -129,6 +35,8 @@ body {
     #d6e3fa 99.99%,
     #ffffff00 100%
   );
+  position: relative;
+  padding-top: 80px;
 }
 
 #hero-text {
@@ -479,4 +387,24 @@ h2 {
   opacity: 0;
   animation-name: fadeInRight;
   -webkit-animation-name: fadeInRight;
+}
+
+@media only screen and (max-width: 768px) {
+  #services {
+    flex-direction: column;
+  }
+
+  .service-div {
+    max-width: 100vw;
+  }
+
+  #why-content {
+    flex-direction: column;
+    margin-left: var(--mobile-gutter);
+    margin-right: calc(var(--mobile-gutter) / 2);
+  }
+
+  #why-text {
+    width: 100%;
+  }
 }

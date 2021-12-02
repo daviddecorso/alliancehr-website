@@ -6,11 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us - AllianceHR LLC</title>
     <link rel="stylesheet" href="about-us.css" />
+    <link rel="stylesheet" href="nav.css" />
   </head>
-  <body>
+  <body id="body">
     <!-- NAVBAR SECTION -->
-    <nav id="navbar">
+    <div
+      id="nav-menu-icon"
+      class="nav-icon desktop-hidden"
+      onclick="openMobileMenu()"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="icon icon-tabler icon-tabler-menu-2"
+        width="36"
+        height="36"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="#000000"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <line x1="4" y1="6" x2="20" y2="6" />
+        <line x1="4" y1="12" x2="20" y2="12" />
+        <line x1="4" y1="18" x2="20" y2="18" />
+      </svg>
+    </div>
+    <div
+      id="nav-x-icon"
+      class="nav-icon hidden desktop-hidden"
+      onclick="closeMobileMenu()"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="icon icon-tabler icon-tabler-x"
+        width="36"
+        height="36"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="#000000"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <line x1="18" y1="6" x2="6" y2="18" />
+        <line x1="6" y1="6" x2="18" y2="18" />
+      </svg>
+    </div>
+    <nav id="alliance-navbar" class="navbar mobile-hidden">
       <img
+        id="brand"
         src="./img/logo-sm.png"
         alt="AllianceHR Logo"
         style="width: 160px; height: 52px"
@@ -22,7 +69,13 @@
           <li><a href="/about-us.html">About Us</a></li>
           <li><a href="/">News</a></li>
           <li><a href="/">Contact Us</a></li>
-          <li>
+          <div>
+            <hr class="nav-line" />
+          </div>
+          <li class="desktop-hidden" style="padding-top: 18px">
+            <a href="/">Client Login</a>
+          </li>
+          <li class="mobile-hidden">
             <a href="/"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -47,8 +100,8 @@
             </a>
           </li>
         </ul>
-        <button class="nav-button-outlined">Get a quote</button>
-        <div class="buttons-div" style="position: relative">
+        <button class="nav-button-outlined mobile-hidden">Get a quote</button>
+        <div class="buttons-div mobile-hidden" style="position: relative">
           <button class="nav-button-filled">Client Login</button>
           <div
             class="hidden forms-button"
@@ -58,8 +111,8 @@
               padding-bottom: 3px;
               border-radius: 16px;
               cursor: pointer;
-              width: 140px;
-              height: 45px;
+              width: 134px;
+              height: 40px;
               text-align: center;
               border: 2px solid black;
               margin-top: 1px;
@@ -68,10 +121,19 @@
             <p>Client Forms</p>
           </div>
         </div>
+        <div
+          class="desktop-hidden"
+          style="position: absolute; bottom: 8px; font-size: 18px"
+        >
+          <span class="mobile-nav-bottom-text"
+            ><a href="/">Get your quote</a> / Call us at
+            <a href="/">(561)-972-4449</a></span
+          >
+        </div>
       </div>
     </nav>
 
-    <div style="margin-top: 6vh" class="content">
+    <div class="content" style="margin-top: calc(80px + 10vh)">
       <h1
         style="
           margin-top: 3rem;
@@ -189,4 +251,21 @@
       />
     </div>
   </body>
+  <script>
+    const openMobileMenu = () => {
+      document
+        .getElementById("alliance-navbar")
+        .classList.remove("mobile-hidden");
+      document.getElementById("body").classList.add("prevent-scrolling");
+      document.getElementById("nav-menu-icon").classList.add("hidden");
+      document.getElementById("nav-x-icon").classList.remove("hidden");
+    };
+
+    const closeMobileMenu = () => {
+      document.getElementById("alliance-navbar").classList.add("mobile-hidden");
+      document.getElementById("body").classList.remove("prevent-scrolling");
+      document.getElementById("nav-menu-icon").classList.remove("hidden");
+      document.getElementById("nav-x-icon").classList.add("hidden");
+    };
+  </script>
 </html>
