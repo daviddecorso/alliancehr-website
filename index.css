@@ -395,6 +395,19 @@ h2 {
   -webkit-animation-name: fadeInRight;
 }
 
+#testimonial-div {
+  position: relative;
+  height: 270px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#testimonial-person-section {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
 @media only screen and (max-width: 768px) {
   #services {
     flex-direction: column;
@@ -442,5 +455,22 @@ h2 {
     margin-right: var(--mobile-gutter);
     max-width: 100vw;
     align-items: center;
+  }
+
+  #testimonial-mobile {
+    margin-left: 1vw;
+    width: 94vw;
+  }
+
+  #testimonial-div {
+    height: auto;
+  }
+
+  .stars {
+    text-align: center;
+  }
+
+  #testimonial-person-section {
+    justify-content: center;
   }
 }

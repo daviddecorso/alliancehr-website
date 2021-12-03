@@ -76,6 +76,9 @@
           <li class="desktop-hidden" style="padding-top: 18px">
             <a href="/">Client Login</a>
           </li>
+          <li class="desktop-hidden" style="padding-top: 18px">
+            <a href="/">Client Forms</a>
+          </li>
           <li class="mobile-hidden">
             <a href="tel:561-972-4449"
               ><svg
@@ -229,14 +232,7 @@
     <h2 style="padding-bottom: 0px; margin-bottom: 0px">
       See What Our Clients Are Saying
     </h2>
-    <div
-      style="
-        position: relative;
-        height: 270px;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-      "
-    >
+    <div id="testimonial-div">
       <div class="animatedFadeInRight" id="testimonials">
         <div id="testimonial1" class="testimonial">
           <p class="testimonial-text">
@@ -253,7 +249,7 @@
             <img src="./img/star.svg" />
             <img src="./img/star.svg" />
           </div>
-          <div style="display: flex; align-items: center; margin-top: 1rem">
+          <div id="testimonial-person-section">
             <img
               class="testimonial-profile"
               src="https://alliancehrllc.com/wp-content/uploads/2017/04/steve02.jpg"
@@ -379,6 +375,33 @@
           </div>
         </div>
       </div>
+      <div id="testimonial-mobile" class="desktop-hidden testimonial">
+        <p class="testimonial-text">
+          "Before I joined AllianceHR, it was a challenge to manage worker’s
+          comp on my own with the reports, compliance, and dreadful end of the
+          year audits. Now AllianceHR manages all of that for me. They also
+          assume my worker’s comp risk which is a huge relief for me not having
+          to worry about a worker’s comp claim or how to process it."
+        </p>
+        <div class="stars">
+          <img src="./img/star.svg" />
+          <img src="./img/star.svg" />
+          <img src="./img/star.svg" />
+          <img src="./img/star.svg" />
+          <img src="./img/star.svg" />
+        </div>
+        <div style="display: flex; align-items: center; margin-top: 1rem">
+          <img
+            class="testimonial-profile"
+            src="https://alliancehrllc.com/wp-content/uploads/2017/04/steve02.jpg"
+            alt=""
+          />
+          <div style="display: flex; flex-direction: column">
+            <span class="testimonial-name">Steve C.</span>
+            <span class="testimonial-company">Company Name Inc.</span>
+          </div>
+        </div>
+      </div>
       <div
         style="
           position: absolute;
@@ -388,6 +411,7 @@
           width: 8vw;
           background: linear-gradient(270deg, #fff, rgba(255, 255, 255, 0));
         "
+        class="mobile-hidden"
       ></div>
       <div
         style="
@@ -398,6 +422,7 @@
           width: 8vw;
           background: linear-gradient(90deg, #fff, rgba(255, 255, 255, 0));
         "
+        class="mobile-hidden"
       ></div>
     </div>
 
