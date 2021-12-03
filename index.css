@@ -44,6 +44,7 @@ body {
   flex-direction: column;
   max-width: 500px;
   margin-left: var(--gutter);
+  z-index: 2;
 }
 
 .title {
@@ -63,6 +64,11 @@ h2 {
   width: 30%;
   height: auto;
   margin-left: var(--gutter);
+  position: absolute;
+  top: 80;
+  right: 0;
+  height: 50vh;
+  width: auto;
 }
 
 .emphasized-text {
