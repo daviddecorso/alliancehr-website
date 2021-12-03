@@ -39,3 +39,29 @@ h2 {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 3% 5%;
 }
+
+#quote-div {
+  position: relative;
+  margin: 2rem 5rem 3rem 5rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .content {
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+
+  #top-content {
+    margin-top: 10vh;
+  }
+
+  #quote-div {
+    margin-top: 20vh;
+    margin-left: 8vw;
+    margin-right: 8vw;
+  }
+
+  img {
+    width: 90vw;
+  }
+}

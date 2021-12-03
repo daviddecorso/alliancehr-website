@@ -26,10 +26,39 @@ body {
   text-align: left;
 }
 
+#top-content {
+  margin-top: calc(80px + 10vh);
+}
+
 h2 {
   font-size: 34px;
   font-weight: 500;
   text-align: center;
   padding-top: 2rem;
   padding-bottom: 1rem;
+}
+
+#quote-div {
+  position: relative;
+  margin: 2rem 5rem 3rem 5rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .content {
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+
+  #top-content {
+    margin-top: 10vh;
+  }
+
+  #quote-div {
+    margin-left: 8vw;
+    margin-right: 8vw;
+  }
+
+  img {
+    width: 90vw;
+  }
 }
