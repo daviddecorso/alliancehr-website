@@ -413,4 +413,34 @@ h2 {
   #why-text {
     width: 100%;
   }
+
+  .big-stat {
+    font-size: 42px;
+  }
+
+  #testimonials {
+    display: none;
+  }
+
+  #hero-img {
+    display: none;
+  }
+
+  #hero {
+    background: linear-gradient(
+      286.16deg,
+      rgb(193, 214, 252) 14.51%,
+      rgb(214, 227, 250) 99.99%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    padding-top: 2vh;
+  }
+
+  #hero-text {
+    text-align: center;
+    margin-left: var(--mobile-gutter);
+    margin-right: var(--mobile-gutter);
+    max-width: 100vw;
+    align-items: center;
+  }
 }
