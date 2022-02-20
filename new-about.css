@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+:root {
+  --primary-color: #6b86bd;
+  --primary-hover-color: #5781d6;
+  --text-color: black;
+  --text-secondary: #3f3f3f;
+  --grey-background: #e5e5e5;
+  --gutter: 10vw;
+  --half-gutter: 5vw;
+}
+
+.content {
+  margin-top: 4rem;
+  margin-left: var(--gutter);
+  margin-right: var(--gutter);
+  text-align: left;
+}
+
+.emphasized-text {
+  color: var(--primary-color);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  margin: 0;
+}
+
+.section-title {
+  font-size: 34px;
+  font-weight: 500;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+#top-content {
+  margin-top: calc(80px + 10vh);
+}
+
+#hero-img {
+  width: 765px;
+  height: auto;
+  margin-right: var(--half-gutter);
+}
+
+.hero-content {
+  background: linear-gradient(
+    180deg,
+    rgba(196, 196, 196, 0.41) 0%,
+    rgba(196, 196, 196, 0) 100%
+  );
+  padding-left: var(--gutter);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.hero-text {
+  margin-top: 8%;
+  max-width: 700px;
+}
+
+.hero-img-container {
+  margin-top: 3%;
+}
+
+.cta-button {
+  width: 260px;
+  height: 58px;
+  color: white;
+  background-color: var(--primary-color);
+  border-radius: 16px;
+  border: none;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.wave-div {
+  margin-top: -4vw;
+  background-color: var(--primary-color);
+}
+
+#bot-wave {
+  margin-top: -1vw;
+}
+
+.numbers-container {
+  margin-top: 5vh;
+}
+
+.stats-title {
+  margin-top: 0;
+  margin-bottom: 3rem;
+  color: white;
+  text-align: center;
+  font-size: 34px;
+  font-weight: 400;
+}
+
+.statistics-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.statistics-div {
+  margin-left: 3vw;
+  margin-right: 3vw;
+  color: white;
+  flex-basis: calc(100% / 3);
+}
+
+.statistic {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.big-stat {
+  font-size: 52px;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-weight: 500;
+}
+
+.story-section {
+  margin-left: calc(var(--gutter) * 2);
+  margin-right: calc(var(--gutter) * 2);
+}
+
+.story-title {
+}
+
+.story-pgh {
+  margin-bottom: 4rem;
+}
+
+.quote-text {
+  color: #646464;
+}
+
+.quote-attr {
+  color: #646464;
+}
+
+.quote-container {
+  margin-bottom: 4rem;
+  border-left: 2px solid #9e9e9e;
+  padding-left: 1.5rem;
+}

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - AllianceHR LLC</title>
+    <link rel="stylesheet" href="new-about.css" />
+    <link rel="stylesheet" href="nav.css" />
+  </head>
+  <body id="body">
+    <!-- NAVBAR SECTION -->
+    <div
+      id="nav-menu-icon"
+      class="nav-icon desktop-hidden"
+      onclick="openMobileMenu()"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="icon icon-tabler icon-tabler-menu-2"
+        width="36"
+        height="36"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="#000000"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <line x1="4" y1="6" x2="20" y2="6" />
+        <line x1="4" y1="12" x2="20" y2="12" />
+        <line x1="4" y1="18" x2="20" y2="18" />
+      </svg>
+    </div>
+    <div
+      id="nav-x-icon"
+      class="nav-icon hidden desktop-hidden"
+      onclick="closeMobileMenu()"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="icon icon-tabler icon-tabler-x"
+        width="36"
+        height="36"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="#000000"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <line x1="18" y1="6" x2="6" y2="18" />
+        <line x1="6" y1="6" x2="18" y2="18" />
+      </svg>
+    </div>
+    <nav id="alliance-navbar" class="navbar mobile-hidden">
+      <img
+        id="brand"
+        src="./img/logo-sm.png"
+        alt="AllianceHR Logo"
+        style="width: 160px; height: 52px"
+      />
+      <div id="navbar-elements">
+        <ul class="nav-list">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/our-services.html">Our Services</a></li>
+          <li><a href="/about-us.html">About Us</a></li>
+          <li><a href="/">News</a></li>
+          <li><a href="/">Contact Us</a></li>
+          <div>
+            <hr class="nav-line" />
+          </div>
+          <li class="desktop-hidden" style="padding-top: 18px">
+            <a href="/">Client Login</a>
+          </li>
+          <li class="mobile-hidden">
+            <a href="/"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-phone-call"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="#000000"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"
+                />
+                <path d="M15 7a2 2 0 0 1 2 2" />
+                <path d="M15 3a6 6 0 0 1 6 6" />
+              </svg>
+              <span>(561)-972-4449</span>
+            </a>
+          </li>
+        </ul>
+        <button class="nav-button-outlined mobile-hidden">Get a quote</button>
+        <div class="buttons-div mobile-hidden" style="position: relative">
+          <button class="nav-button-filled">Client Login</button>
+          <div
+            class="hidden forms-button"
+            onclick="window.location.assign('/forms.html')"
+            style="
+              position: absolute;
+              padding-bottom: 3px;
+              border-radius: 16px;
+              cursor: pointer;
+              width: 134px;
+              height: 40px;
+              text-align: center;
+              border: 2px solid black;
+              margin-top: 1px;
+            "
+          >
+            <p>Client Forms</p>
+          </div>
+        </div>
+        <div
+          class="desktop-hidden"
+          style="position: absolute; bottom: 8px; font-size: 18px"
+        >
+          <span class="mobile-nav-bottom-text"
+            ><a href="/">Get your quote</a> / Call us at
+            <a href="/">(561)-972-4449</a></span
+          >
+        </div>
+      </div>
+    </nav>
+    <div id="top-content">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Our mission</h1>
+          <p>
+            We are here to provide highest level of personalized service
+            achievable. We strive to combine this extreme attention to clients’
+            needs with our time & money saving business model to provide a
+            unique and essential service to any small business
+          </p>
+          <button class="cta-button">Get your free quote</button>
+        </div>
+        <div class="hero-img-container">
+          <img
+            id="hero-img"
+            src="./img/campaign-creators-qCi_MzVODoU-unsplash.jpg"
+            alt="Company meeting"
+          />
+        </div>
+      </div>
+      <div class="numbers-container">
+        <img id="top-wave" src="./img/top-wave.svg" alt="" />
+        <div class="wave-div">
+          <h2 class="stats-title">The Numbers</h2>
+          <div class="statistics-content">
+            <div class="statistics-div">
+              <div class="statistic">
+                <span id="stat-1" class="big-stat">8 Years</span>
+                <span class="stat-label">founded in 2014 in Tequesta, FL</span>
+              </div>
+            </div>
+            <div class="statistics-div">
+              <div class="statistic">
+                <span id="stat-2" class="big-stat">80+</span>
+                <span class="stat-label">clients served</span>
+              </div>
+            </div>
+            <div class="statistics-div">
+              <div class="statistic">
+                <span id="stat-3" class="big-stat">3200</span>
+                <span class="stat-label">worksite employees</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <img id="bot-wave" src="./img/bottom-wave.svg" alt="" />
+      </div>
+      <div class="story-section">
+        <h2 class="section-title">Our Story</h2>
+        <div class="story-content">
+          <h3 class="story-title">Getting Started</h3>
+          <p class="story-pgh">
+            The Professional Employer Organization industry is dominated by
+            larger players and the barriers to entry are high. We knew this when
+            we started AllianceHR and determined that we needed to be different
+            so that we can provide value and succeed in the space.
+          </p>
+          <h3 class="story-title">Standing Out in the Crowd</h3>
+          <p class="story-pgh">
+            The biggest problem most people have when using a PEO is the lack of
+            personality and care, usually from larger companies with that simply
+            just don’t understand how real people work. We devised a service
+            first model that ensures that we provide an exceptional level of
+            care and quality. Each of our clients has a dedicated payroll
+            processor and access to the rest of the AllianceHR team at all
+            times.
+          </p>
+
+          <div class="quote-container">
+            <p class="quote-text"></>
+              “Every time you call AllianceHR you are immediately connected to a
+              real person who has the power to solve the problems you are
+              facing, and that’s something you can’t find anywhere else.”
+            </p>
+            <span class="quote-attr">
+              – Arthur Scott (Co-Owner & General Manager)</span
+            >
+          </div>
+          <h3 class="story-title">Where we are today</h3>
+          <p class="story-pgh">
+            This has proven highly valuable to the market as our business
+            continues to attract clients who are both new to using a PEO and
+            experienced with the PEO model. As we look towards the future, we
+            have plans to increase the level of care we provide and increase the
+            availability of our service into additional states. Currently we
+            service clients in six states: Florida, Georgia, Illinois, New
+            Jersey, Nevada, and California.
+          </p>
+        </div>
+        <div style="text-align: center">
+          <img
+            src="./img/company-map.png"
+            alt="Map of Alliance HR's locations"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const openMobileMenu = () => {
+      document
+        .getElementById("alliance-navbar")
+        .classList.remove("mobile-hidden");
+      document.getElementById("body").classList.add("prevent-scrolling");
+      document.getElementById("nav-menu-icon").classList.add("hidden");
+      document.getElementById("nav-x-icon").classList.remove("hidden");
+    };
+
+    const closeMobileMenu = () => {
+      document.getElementById("alliance-navbar").classList.add("mobile-hidden");
+      document.getElementById("body").classList.remove("prevent-scrolling");
+      document.getElementById("nav-menu-icon").classList.remove("hidden");
+      document.getElementById("nav-x-icon").classList.add("hidden");
+    };
+  </script>
+</html>
