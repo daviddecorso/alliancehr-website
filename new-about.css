@@ -43,6 +43,7 @@ body {
   width: 765px;
   height: auto;
   margin-right: var(--half-gutter);
+  margin-left: 30px;
 }
 
 .hero-content {

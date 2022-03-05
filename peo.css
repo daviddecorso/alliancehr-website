@@ -6,7 +6,7 @@
   --text-color: black;
   --text-secondary: #3f3f3f;
   --grey-background: #e5e5e5;
-  --gutter: 10vw;
+  --gutter: 15vw;
   --half-gutter: 5vw;
 }
 
@@ -30,9 +30,8 @@ body {
 .section-title {
   font-size: 34px;
   font-weight: 500;
-  text-align: center;
   padding-top: 2rem;
-  padding-bottom: 1rem;
+  margin-bottom: 0.2rem;
 }
 
 #top-content {
@@ -42,16 +41,11 @@ body {
 #hero-img {
   width: 420px;
   height: auto;
-  margin-right: var(--half-gutter);
+  margin-right: var(--gutter);
   margin-left: 30px;
 }
 
 .hero-content {
-  background: linear-gradient(
-    180deg,
-    rgba(196, 196, 196, 0.41) 0%,
-    rgba(196, 196, 196, 0) 100%
-  );
   padding-left: var(--gutter);
   display: flex;
   flex-direction: row;
@@ -59,8 +53,8 @@ body {
 }
 
 .hero-text {
-  margin-top: 8%;
-  max-width: 700px;
+  margin-top: 6.5%;
+  max-width: 800px;
 }
 
 .hero-img-container {
@@ -79,40 +73,34 @@ body {
   cursor: pointer;
 }
 
-.services-section {
+.peo-section {
   background-color: #dfe3ec;
-  padding-bottom: 1rem;
+  margin-top: 10vh;
+  padding-bottom: 3rem;
 }
 
-.services-card {
-  background-color: white;
-  width: 340px;
-  height: 110px;
-  border-radius: 20px;
+.peo-subtext {
+}
+
+.peo-content {
+  margin-left: var(--gutter);
+  margin-right: var(--gutter);
+  padding-top: 0.1rem;
+  max-width: 60vw;
+}
+
+.item-container {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: center;
 }
 
-.services-text {
-  font-weight: 700;
-  width: 220px;
-  font-size: 20px;
+.item-text {
+  margin-left: 1rem;
 }
 
-.services-icon {
-  width: 68px;
-  height: 68px;
-  margin-left: 14px;
-  margin-right: 14px;
-}
-
-.services-row {
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 2.5rem;
-  margin-bottom: 3rem;
+.pricing-text {
+  margin-right: 20px;
+  max-width: 700px;
 }
 
 .pricing-content {
@@ -121,6 +109,8 @@ body {
   padding-top: 10vh;
 
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .blob-section-border {
@@ -141,11 +131,28 @@ body {
   pointer-events: none;
 }
 
-.pricing-text {
-  margin-right: 20px;
+#pricing-diagram {
+  max-width: 380px;
+  width: 30vw;
+  height: auto;
+  margin-top: 2rem;
+  margin-right: 4vw;
 }
 
 @media only screen and (max-width: 768px) {
+  :root {
+    --gutter: 4vw;
+    --half-gutter: 1vw;
+  }
+
+  .peo-content {
+    max-width: 97vw;
+  }
+
+  .svg-div {
+    display: none;
+  }
+
   .hero-content {
     flex-direction: column;
     padding-left: 7vw;
@@ -157,8 +164,6 @@ body {
   }
 
   #hero-img {
-    width: 80vw;
-    height: auto;
     display: none;
   }
 
@@ -186,6 +191,23 @@ body {
     margin-left: 5vw;
     margin-right: 5vw;
     padding-top: 1rem;
+  }
+
+  .pricing-title {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  .pricing-title h3 {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .pricing-title svg {
+    display: block;
+    margin-right: 0.5rem;
+    margin-left: -0.5rem;
   }
 
   #pricing-diagram {

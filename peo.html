@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Workers comp - AllianceHR LLC</title>
+    <link rel="stylesheet" href="peo.css" />
+    <link rel="stylesheet" href="nav.css" />
+  </head>
+  <body id="body">
+    <!-- NAVBAR SECTION -->
+    <div
+      id="nav-menu-icon"
+      class="nav-icon desktop-hidden"
+      onclick="openMobileMenu()"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="icon icon-tabler icon-tabler-menu-2"
+        width="36"
+        height="36"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="#000000"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <line x1="4" y1="6" x2="20" y2="6" />
+        <line x1="4" y1="12" x2="20" y2="12" />
+        <line x1="4" y1="18" x2="20" y2="18" />
+      </svg>
+    </div>
+    <div
+      id="nav-x-icon"
+      class="nav-icon hidden desktop-hidden"
+      onclick="closeMobileMenu()"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="icon icon-tabler icon-tabler-x"
+        width="36"
+        height="36"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="#000000"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <line x1="18" y1="6" x2="6" y2="18" />
+        <line x1="6" y1="6" x2="18" y2="18" />
+      </svg>
+    </div>
+    <nav id="alliance-navbar" class="navbar mobile-hidden">
+      <img
+        id="brand"
+        src="./img/logo-sm.png"
+        alt="AllianceHR Logo"
+        style="width: 160px; height: 52px"
+      />
+      <div id="navbar-elements">
+        <ul class="nav-list">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/our-services.html">Our Services</a></li>
+          <li><a href="/about-us.html">About Us</a></li>
+          <li><a href="/">News</a></li>
+          <li><a href="/">Contact Us</a></li>
+          <div>
+            <hr class="nav-line" />
+          </div>
+          <li class="desktop-hidden" style="padding-top: 18px">
+            <a href="/">Client Login</a>
+          </li>
+          <li class="mobile-hidden">
+            <a href="/"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-phone-call"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="#000000"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"
+                />
+                <path d="M15 7a2 2 0 0 1 2 2" />
+                <path d="M15 3a6 6 0 0 1 6 6" />
+              </svg>
+              <span>(561)-972-4449</span>
+            </a>
+          </li>
+        </ul>
+        <button class="nav-button-outlined mobile-hidden">Get a quote</button>
+        <div class="buttons-div mobile-hidden" style="position: relative">
+          <button class="nav-button-filled">Client Login</button>
+          <div
+            class="hidden forms-button"
+            onclick="window.location.assign('/forms.html')"
+            style="
+              position: absolute;
+              padding-bottom: 3px;
+              border-radius: 16px;
+              cursor: pointer;
+              width: 134px;
+              height: 40px;
+              text-align: center;
+              border: 2px solid black;
+              margin-top: 1px;
+            "
+          >
+            <p>Client Forms</p>
+          </div>
+        </div>
+        <div
+          class="desktop-hidden"
+          style="position: absolute; bottom: 8px; font-size: 18px"
+        >
+          <span class="mobile-nav-bottom-text"
+            ><a href="/">Get your quote</a> / Call us at
+            <a href="/">(561)-972-4449</a></span
+          >
+        </div>
+      </div>
+    </nav>
+    <div id="top-content">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>What is a PEO or Employee Leasing Company?</h1>
+          <p>
+            A Professional Employer Organization (PEO) and Employee Leasing
+            company are full-service human resource outsourcing that operates
+            under a co-employment model. Under this arrangement we provide
+            payroll, worker’s comp, benefits administration, compliance, and
+            much more on the behalf of your business. We have all of the
+            liability when it comes to worker’s comp and payroll since under the
+            co-employment model we can file all wages paid under our FEIN
+            number.
+          </p>
+          <button class="cta-button">Get your free quote</button>
+        </div>
+        <div class="hero-img-container">
+          <img
+            id="hero-img"
+            src="./img/PEO-Picture.jpg"
+            alt="Doctor and patient"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="peo-section">
+      <div class="peo-content">
+        <h2 class="section-title">Why use a PEO?</h2>
+        <p class="peo-subtext">
+          With our expert, strategic guidance as your PEO, you will be able to
+          grow your business and have peace of mind that you’re more protected
+          while doing so. We will help you with:
+        </p>
+        <div class="item-container">
+          <div class="svg-div">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-circle-check"
+              width="78"
+              height="78"
+              viewBox="0 0 24 24"
+              stroke-width="0.8"
+              stroke="#00B341"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <circle cx="12" cy="12" r="9" />
+              <path d="M9 12l2 2l4 -4" />
+            </svg>
+          </div>
+
+          <div class="item-text">
+            <h3>Payroll and tax filing</h3>
+            <p>
+              We process payroll and pay local, state and federal employment
+              taxes. Payroll takes no more than a few clicks and we process the
+              rest. We even have integrated systems to track and manage time
+              that syncs directly with our software.
+            </p>
+          </div>
+        </div>
+        <div class="item-container">
+          <div class="svg-div">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-circle-check"
+              width="78"
+              height="78"
+              viewBox="0 0 24 24"
+              stroke-width="0.8"
+              stroke="#00B341"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <circle cx="12" cy="12" r="9" />
+              <path d="M9 12l2 2l4 -4" />
+            </svg>
+          </div>
+
+          <div class="item-text">
+            <h3>Worker's compensation insurance</h3>
+            <p>
+              When you partner with AllianceHR you will be enrolled underneath
+              our master worker’s comp policy. We offer a flat percentage rate
+              for worker’s comp and handle the complicated worker’s comp audits.
+              Learn more on our worker’s comp page!
+            </p>
+          </div>
+        </div>
+        <div class="item-container">
+          <div class="svg-div">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-circle-check"
+              width="78"
+              height="78"
+              viewBox="0 0 24 24"
+              stroke-width="0.8"
+              stroke="#00B341"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <circle cx="12" cy="12" r="9" />
+              <path d="M9 12l2 2l4 -4" />
+            </svg>
+          </div>
+
+          <div class="item-text">
+            <h3>Compliance</h3>
+            <p>
+              Our experts protect your business from fines and penalties in
+              every HR area. We specialize in payroll tax law and reporting
+              requirements, unemployment insurance, worker’s compensation,
+              hiring and HR compliance.
+            </p>
+          </div>
+        </div>
+        <div class="item-container">
+          <div class="svg-div">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-circle-check"
+              width="78"
+              height="78"
+              viewBox="0 0 24 24"
+              stroke-width="0.8"
+              stroke="#00B341"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <circle cx="12" cy="12" r="9" />
+              <path d="M9 12l2 2l4 -4" />
+            </svg>
+          </div>
+
+          <div class="item-text">
+            <h3>Human resource support</h3>
+            <p>
+              You will have a dedicated payroll processor who is familiar with
+              the ins and outs of payroll, worker’s comp, compliance, and more.
+              The rest of our team will also be here to assist you in any HR
+              business related activities.
+            </p>
+          </div>
+        </div>
+        <div class="item-container">
+          <div class="svg-div">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-circle-check"
+              width="78"
+              height="78"
+              viewBox="0 0 24 24"
+              stroke-width="0.8"
+              stroke="#00B341"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <circle cx="12" cy="12" r="9" />
+              <path d="M9 12l2 2l4 -4" />
+            </svg>
+          </div>
+
+          <div class="item-text">
+            <h3>Benefits administration</h3>
+            <p>
+              Our minimal essential coverage & supplemental benefits are
+              available for your employees to enroll in the day you start as a
+              client. We also have strategic partnerships that give you access
+              to major medical plans as well as private insurance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pricing-section">
+      <div class="blob-section-border">
+        <img id="pricing-left-wave" src="./img/pricing-wave-left.png" alt="" />
+        <img
+          id="pricing-right-wave"
+          src="./img/pricing-wave-right.png"
+          alt=""
+        />
+      </div>
+      <div class="pricing-content">
+        <div class="pricing-text">
+          <h2>Pricing</h2>
+          <p>We offer a simple flat-percentage pricing model.</p>
+          <p>
+            For example, if you have a builder who makes $1,000 a week and
+            worker’s comp is 10% under our contract you will pay an additional
+            $100 dollars a week for worker’s comp coverage for this employee.
+            Easy, right?
+          </p>
+          <p>
+            Partnering with us means you’ll never have to deal with prepayments,
+            large premiums, or audits ever again.
+          </p>
+        </div>
+
+        <div>
+          <img id="pricing-diagram" src="./img/pricing-diagram.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const openMobileMenu = () => {
+      document
+        .getElementById("alliance-navbar")
+        .classList.remove("mobile-hidden");
+      document.getElementById("body").classList.add("prevent-scrolling");
+      document.getElementById("nav-menu-icon").classList.add("hidden");
+      document.getElementById("nav-x-icon").classList.remove("hidden");
+    };
+
+    const closeMobileMenu = () => {
+      document.getElementById("alliance-navbar").classList.add("mobile-hidden");
+      document.getElementById("body").classList.remove("prevent-scrolling");
+      document.getElementById("nav-menu-icon").classList.remove("hidden");
+      document.getElementById("nav-x-icon").classList.add("hidden");
+    };
+  </script>
+</html>
