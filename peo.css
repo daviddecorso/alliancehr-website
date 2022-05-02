@@ -73,6 +73,10 @@ body {
   cursor: pointer;
 }
 
+.cta-button:hover {
+  background-color: var(--primary-hover-color);
+}
+
 .peo-section {
   background-color: #dfe3ec;
   margin-top: 10vh;

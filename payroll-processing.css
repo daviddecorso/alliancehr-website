@@ -52,15 +52,12 @@ body {
     rgba(196, 196, 196, 0.41) 0%,
     rgba(196, 196, 196, 0) 100%
   );
-  padding-left: var(--gutter);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
 }
 
 .hero-text {
+  padding-top: 30px;
   margin-top: 8%;
-  max-width: 700px;
+  text-align: center;
 }
 
 .hero-img-container {
@@ -83,40 +80,75 @@ body {
   background-color: var(--primary-hover-color);
 }
 
-.services-section {
+.payroll-section {
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+.payroll-container {
   background-color: #dfe3ec;
-  padding-bottom: 1rem;
+  width: 350px;
+  border-radius: 30px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.services-card {
-  background-color: white;
-  width: 340px;
-  height: 110px;
-  border-radius: 20px;
+.payroll-item {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
-.services-text {
-  font-weight: 700;
-  width: 220px;
+.payroll-button {
+  width: 200px;
+  height: 45px;
+  color: white;
+  background-color: var(--primary-color);
+  border-radius: 16px;
+  border: none;
   font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  align-self: center;
 }
 
-.services-icon {
-  width: 68px;
-  height: 68px;
-  margin-left: 14px;
-  margin-right: 14px;
+.payroll-button:hover {
+  background-color: var(--primary-hover-color);
 }
 
-.services-row {
+.payroll-icon {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.icon-header {
+  width: 64px;
+  height: 64px;
+  margin-right: 10px;
+}
+
+.payroll-header {
+  margin-left: -20px;
+  margin-top: 10px;
   display: flex;
-  justify-content: space-evenly;
-  margin-top: 2.5rem;
-  margin-bottom: 3rem;
+}
+
+.payroll-text {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .pricing-content {
@@ -150,6 +182,12 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
+  .payroll-section {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
   .hero-content {
     flex-direction: column;
     padding-left: 7vw;
@@ -168,17 +206,6 @@ body {
 
   .section-title {
     margin-bottom: 0.5rem;
-  }
-
-  .services-row {
-    flex-direction: column;
-    margin-top: 0;
-    margin-bottom: 0;
-    align-items: center;
-  }
-
-  .services-card {
-    margin-bottom: 1rem;
   }
 
   .blob-section-border {

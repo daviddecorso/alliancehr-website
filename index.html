@@ -66,7 +66,15 @@
       <div id="navbar-elements">
         <ul class="nav-list">
           <li><a href="/index.html">Home</a></li>
-          <li><a href="/our-services.html">Our Services</a></li>
+          <div class="dropdown-container" id="our-services">
+            <li>Our Services</li>
+            <div class="hidden dropdown" id="dropdown">
+              <a href="/peo.html"><p>PEO</p></a>
+              <a href="/payroll-processing.html"><p>Payroll Processing</p></a>
+              <a href="/workers-comp.html"><p>Workers' Compensation</p></a>
+              <a href="/employee-benefits.html"><p>Employee Benefits</p></a>
+            </div>
+          </div>
           <li><a href="/about-us.html">About Us</a></li>
           <li><a href="/">News</a></li>
           <li><a href="/">Contact Us</a></li>
@@ -79,30 +87,32 @@
           <li class="desktop-hidden" style="padding-top: 18px">
             <a href="/">Client Forms</a>
           </li>
-          <li class="mobile-hidden">
-            <a href="tel:561-972-4449"
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-tabler icon-tabler-phone-call"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="#000000"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path
-                  d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"
-                />
-                <path d="M15 7a2 2 0 0 1 2 2" />
-                <path d="M15 3a6 6 0 0 1 6 6" />
-              </svg>
-              <span>(561)-972-4449</span>
-            </a>
-          </li>
+          <div class="mobile-hidden phone-nav">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-phone-call"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="#000000"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"
+              />
+              <path d="M15 7a2 2 0 0 1 2 2" />
+              <path d="M15 3a6 6 0 0 1 6 6" />
+            </svg>
+            <li class="mobile-hidden phone-number">
+              <a href="tel:561-972-4449">
+                <span>(561)-972-4449</span>
+              </a>
+            </li>
+          </div>
         </ul>
         <button class="nav-button-outlined mobile-hidden">Get a quote</button>
         <div class="buttons-div mobile-hidden" style="position: relative">
@@ -115,11 +125,16 @@
               padding-bottom: 3px;
               border-radius: 16px;
               cursor: pointer;
-              width: 134px;
-              height: 40px;
+              width: 140px;
+              height: 47px;
               text-align: center;
               border: 2px solid black;
               margin-top: 1px;
+              color: white;
+              border-radius: 16px;
+              border: none;
+              font-size: 16px;
+              cursor: pointer;
             "
           >
             <p>Client Forms</p>
@@ -233,6 +248,40 @@
       See What Our Clients Are Saying
     </h2>
     <div id="testimonial-div">
+      <div id="left-arrow">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="testimonial-icon-left"
+          width="60"
+          height="60"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="#696969"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <polyline points="15 6 9 12 15 18" />
+        </svg>
+      </div>
+      <div id="right-arrow">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="testimonial-icon-right"
+          width="60"
+          height="60"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="#696969"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <polyline points="9 6 15 12 9 18" />
+        </svg>
+      </div>
       <div class="animatedFadeInRight" id="testimonials">
         <div id="testimonial1" class="testimonial">
           <p class="testimonial-text">
@@ -483,27 +532,57 @@
     };
   </script>
   <script>
-    const setTranslate = (currentTestimonial) => {
+    const navItem = document.getElementById("our-services");
+    navItem.addEventListener("mouseenter", () => {
+      document.getElementById("dropdown").classList.remove("hidden");
+    });
+    navItem.addEventListener("mouseleave", () => {
+      document.getElementById("dropdown").classList.add("hidden");
+    });
+  </script>
+  <script>
+    let currentTestimonial = 1;
+
+    const setTranslate = (current) => {
       let transformString = `translate(calc(-9.6% - ${(
         20 *
-        (currentTestimonial - 1)
+        (current - 1)
       ).toString()}%), -50%)`;
       document.getElementById("testimonials").style.transform = transformString;
     };
 
+    document.getElementById("left-arrow").onclick = () => {
+      if (currentTestimonial > 1) {
+        currentTestimonial--;
+        setTranslate(currentTestimonial);
+      }
+    };
+
+    document.getElementById("right-arrow").onclick = () => {
+      if (currentTestimonial < 5) {
+        currentTestimonial++;
+        setTranslate(currentTestimonial);
+      }
+    };
+
     document.getElementById("testimonial1").onclick = () => {
+      currentTestimonial = 1;
       setTranslate(1);
     };
     document.getElementById("testimonial2").onclick = () => {
+      currentTestimonial = 2;
       setTranslate(2);
     };
     document.getElementById("testimonial3").onclick = () => {
+      currentTestimonial = 3;
       setTranslate(3);
     };
     document.getElementById("testimonial4").onclick = () => {
+      currentTestimonial = 4;
       setTranslate(4);
     };
     document.getElementById("testimonial5").onclick = () => {
+      currentTestimonial = 5;
       setTranslate(5);
     };
   </script>

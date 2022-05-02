@@ -189,6 +189,10 @@ body {
     cursor: pointer;
   }
 
+  .cta-button:hover {
+    background-color: var(--primary-hover-color);
+  }
+
   .button-container {
     margin-top: 2rem;
     display: flex;

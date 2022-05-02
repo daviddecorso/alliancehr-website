@@ -215,7 +215,7 @@ h2 {
   border: 1px solid #e0e0e0;
   border-radius: 6px;
   width: 900px;
-  margin-right: 40px;
+  margin-right: 70px;
   padding-bottom: 0.5rem;
 }
 
@@ -225,6 +225,7 @@ h2 {
   margin-top: 2rem;
   padding-left: 2rem;
   padding-right: 2rem;
+  user-select: none;
 }
 
 .testimonial-profile {
@@ -237,6 +238,28 @@ h2 {
 
 .testimonial-name {
   font-weight: 700;
+}
+
+.testimonial-icon-left {
+  position: absolute;
+  left: calc(46% - 450px);
+  margin-top: 82px;
+  z-index: 99;
+}
+
+.testimonial-icon-right {
+  position: absolute;
+  right: calc(48% - 450px);
+  margin-top: 82px;
+  z-index: 99;
+}
+
+#left-arrow {
+  cursor: pointer;
+}
+
+#right-arrow {
+  cursor: pointer;
 }
 
 /*
@@ -400,6 +423,7 @@ h2 {
   height: 270px;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  user-select: none;
 }
 
 #testimonial-person-section {
